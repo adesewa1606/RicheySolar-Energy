@@ -12,6 +12,7 @@ const Contact = () => {
         text: "",
     });
 
+    // tctcjcjytcictycujcuytytccthcut
 
     async function handleSubmit() {
         event.preventDefault();
