@@ -1,0 +1,27 @@
+@media (max-width: 768px) {
+
+    .services-container,
+    .project-grid,
+    .testimonial-container,
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .services,
+    .projects,
+    .testimonials,
+    .contact-page,
+    .about,
+    .stats {
+        padding: 80px 20px;
+    }
+
+}

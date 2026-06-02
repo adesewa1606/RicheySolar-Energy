@@ -1,0 +1,135 @@
+.navbar {
+    width: 90%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    transition: 0.4s;
+}
+
+.navbar.active {
+    background: #0f172a;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo span {
+    color: #22c55e;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    color: #000000;
+}
+
+.nav-links li {
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+    /* color: white; */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #22c55e;
+}
+
+.navbar.active .nav-links a {
+    color: #ffffff;
+}
+
+.navbar.active .nav-links a:hover {
+    color: #22c55e;
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        left: -100%;
+
+        width: 100%;
+        background: #0f172a;
+
+        flex-direction: column;
+        padding: 30px;
+
+        transition: 0.4s;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+}
+
+.cart-icon {
+    position: relative;
+
+    color: white;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+.cart-icon span {
+    position: absolute;
+
+    top: -10px;
+    right: -10px;
+
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 12px;
+}

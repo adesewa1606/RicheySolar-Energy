@@ -1,0 +1,33 @@
+.shop {
+    padding: 120px 80px;
+
+    background: #f8fafc;
+}
+
+.shop h1 {
+    font-size: 50px;
+
+    margin-bottom: 50px;
+
+    text-align: center;
+}
+
+.shop-grid {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+
+    .shop {
+        padding: 100px 20px;
+    }
+
+    .shop h1 {
+        font-size: 35px;
+    }
+
+}

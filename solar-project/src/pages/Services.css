@@ -1,0 +1,134 @@
+.services {
+    padding: 100px 80px;
+    background: #f8fafc;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.section-title p {
+    color: gray;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+
+    text-align: center;
+
+    transition: 0.5s;
+
+    position: relative;
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.service-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(135deg,
+            #22c55e,
+            #0f172a);
+
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+.service-card * {
+    position: relative;
+    z-index: 2;
+}
+
+.service-card:hover h3,
+.service-card:hover p {
+    color: white;
+}
+
+.service-icon-box {
+    width: 90px;
+    height: 90px;
+
+    margin: auto;
+    margin-bottom: 20px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #f1f5f9;
+
+    transition: 0.5s;
+}
+
+.service-card:hover .service-icon-box {
+    transform: rotateY(180deg);
+    background: white;
+}
+
+.service-btn {
+    margin-top: 20px;
+
+    padding: 12px 24px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #22c55e;
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+
+.service-card:hover .service-btn {
+    background: white;
+    color: #22c55e;
+}
+
+.service-details {
+    margin-top: 16px;
+    padding: 16px;
+    background: rgba(34, 197, 94, 0.08);
+    border-radius: 12px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #333;
+}
+
+.service-card.expanded {
+    border: 2px solid #22c55e;
+}
+
+@media (max-width: 768px) {
+
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+}
