@@ -76,7 +76,7 @@ const NewsletterPopup = () => {
                     Fill the form below before accessing the website.
                 </p>
 
-                <form id="form" onSubmit={handleSubmit}>
+                <form id="newsletterForm" onSubmit={handleSubmit}>
                     <input
                         type="text"
                         name="user_name"

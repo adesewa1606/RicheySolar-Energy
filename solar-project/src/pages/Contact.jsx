@@ -1,6 +1,6 @@
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "../pages/Contact.css";
 
 const Contact = () => {
@@ -12,9 +12,7 @@ const Contact = () => {
         text: "",
     });
 
-    // tctcjcjytcictycujcuytytccthcut
-
-    async function handleSubmit() {
+    async function handleSubmit(event) {
         event.preventDefault();
         // alert("triggered")
 
@@ -31,10 +29,11 @@ const Contact = () => {
 
         emailjs.send(serviceID, templateID, templateParams).then(
             (response) => {
-                console.log('SUCCESS!', response.status, response.text);
+                toast.success("Message sent successfully! We'll get back to you soon.");
+                setFormData({ name: "", address: "", email: "", phone: "", text: "" });
             },
             (error) => {
-                console.log('FAILED...', error);
+                toast.error("Failed to send message. Please try again.");
             },
         );
 
@@ -44,7 +43,7 @@ const Contact = () => {
 
     return (
 
-        <div className="contact-page">
+        <div id="contact" className="contact-page">
 
             <div className="contact-container">
 
@@ -59,7 +58,7 @@ const Contact = () => {
 
                 </div>
 
-                <form id="form" onSubmit={handleSubmit}>
+                <form id="contactForm" onSubmit={handleSubmit}>
 
                     <input
                         type="text"
